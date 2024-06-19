@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from '@/style/page.module.css';
+import Footer from '@/component/Footer'; // 푸터 컴포넌트 import
 
 const Home: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const Home: React.FC = () => {
       <Link href="/about">
         <button className={styles.button}>About 페이지로 이동</button>
       </Link>
+			<Footer/>
     </main>
   );
 }

@@ -1,20 +1,18 @@
-import React from 'react';
-import Link from 'next/link';
-import styles from '@/style/page.module.css';
+import mainStyle from '@/style/main.module.scss';
+import h1Style from '@/style/h1.module.css';
 
-const About: React.FC = () => {
+import { MilkdownEditorWrapper } from '@/component/MilkdownEditorWrapper';
+
+export default function About() {
   return (
-    <main className={styles.main}>
-      <h1>About Page</h1>
-      <div>
-        이것은 어바웃 페이지입니다.<br/>
-				두번째 페이지이죠
+    <main className={mainStyle.main}>
+      <h1 className={h1Style.h1}>
+        제목 입력 부분
+      </h1>
+      <div className={h1Style.editor}>
+        {/* 이런식으로 provider 안에 감싸야하는듯 */}
+        <MilkdownEditorWrapper/>
       </div>
-      <Link href="/">
-        <button>홈으로 돌아가기</button>
-      </Link>
     </main>
   );
-}
-
-export default About;
+};

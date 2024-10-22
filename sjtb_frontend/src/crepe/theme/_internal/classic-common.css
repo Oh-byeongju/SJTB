@@ -30,7 +30,7 @@
   }
 
   .ProseMirror {
-    /*padding: 60px 120px;*/
+    padding: 60px 120px;
 
     *::selection {
       background: var(--crepe-color-selected);

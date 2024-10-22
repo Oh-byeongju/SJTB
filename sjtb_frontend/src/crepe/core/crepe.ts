@@ -1,7 +1,7 @@
 import type { DefaultValue } from '@milkdown/kit/core'
 import { Editor, defaultValueCtx, editorViewOptionsCtx, rootCtx } from '@milkdown/kit/core'
 
-import { commonmark } from '@milkdown/kit/preset/commonmark'
+import {commonmark} from '@milkdown/kit/preset/commonmark'
 import { gfm } from '@milkdown/kit/preset/gfm'
 import { history, historyProviderConfig } from '@milkdown/kit/plugin/history'
 import { indent, indentConfig } from '@milkdown/kit/plugin/indent'
@@ -58,6 +58,11 @@ export class Crepe {
           ...value,
           size: 4,
         }))
+
+        // listItem 수정 방안
+        // ctx.set(listItemAttr) 이런식으로 메소드 하나씩 까보면 나올꺼 같은데
+        // 근데 이상하게 https://milkdown.vercel.app/docs/recipes/react 여기선 또 잘됨
+        /// crepe 소스 자체 문제인것으로 추측
       })
       .use(commonmark)
       .use(history)

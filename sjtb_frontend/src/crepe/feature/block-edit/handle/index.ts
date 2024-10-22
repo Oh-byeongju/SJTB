@@ -22,7 +22,9 @@ export class BlockHandleView implements PluginView {
     const content = new BlockHandleElement()
     this.#content = content
     this.#content.onAdd = this.onAdd
+    // @ts-ignore
     this.#content.addIcon = config?.handleAddIcon
+    // @ts-ignore
     this.#content.handleIcon = config?.handleDragIcon
     this.#provider = new BlockProvider({
       ctx,

@@ -12,7 +12,7 @@ export interface MenuProps {
   config?: BlockEditFeatureConfig
 }
 
-export const menuComponent: Component<MenuProps> = ({
+export const MenuComponent: Component<MenuProps> = ({
   show,
   hide,
   ctx,
@@ -206,7 +206,7 @@ export const menuComponent: Component<MenuProps> = ({
   `
 }
 
-menuComponent.props = {
+MenuComponent.props = {
   ctx: Object,
   config: Object,
   show: Boolean,
@@ -214,4 +214,4 @@ menuComponent.props = {
   hide: Function,
 }
 
-export const MenuElement = c(menuComponent)
+export const MenuElement = c(MenuComponent)

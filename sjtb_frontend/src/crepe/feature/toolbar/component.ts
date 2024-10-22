@@ -25,7 +25,7 @@ export interface ToolbarProps {
   config?: ToolbarFeatureConfig
 }
 
-export const toolbarComponent: Component<ToolbarProps> = ({
+export const ToolbarComponent: Component<ToolbarProps> = ({
   ctx,
   hide,
   show,
@@ -108,11 +108,11 @@ export const toolbarComponent: Component<ToolbarProps> = ({
   </host>`
 }
 
-toolbarComponent.props = {
+ToolbarComponent.props = {
   ctx: Object,
   hide: Function,
   show: Boolean,
   config: Object,
 }
 
-export const ToolbarElement = c(toolbarComponent)
+export const ToolbarElement = c(ToolbarComponent)

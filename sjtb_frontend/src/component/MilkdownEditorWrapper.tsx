@@ -40,15 +40,10 @@ const MilkdownEditor: React.FC = () => {
           newGroupDelay: 120, // 원하는 newGroupDelay 값
         })
 
-        ctx.set(tooltip.key, {
-          view: pluginViewFactory({
-            component: TooltipView
-          })
-        })
+
       })
       .config(nord)
       .use(commonmark)
-      .use(tooltip)
       .use(history)
       .use(indent)
       .use(trailing)
